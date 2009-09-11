@@ -3,7 +3,7 @@
 Plugin Name: Category pagination fix
 Plugin URI: http://www.htmlremix.com/projects/category-pagination-wordpress-plugin
 Description: Fixes 404 page error in pagination of category page while using custom permalink
-Version: 1.0
+Version: 2.0
 Author: Remiz Rahnas
 Author URI: http://www.htmlremix.com
 
@@ -20,7 +20,7 @@ This program is free software: you can redistribute it and/or modify
     GNU General Public License for more details.
 
 You are allowed to use, change and redistibute without any legal issues. I am not responsible for any damage caused by this program. Use at your own risk
-Tested with Wordpress 2.7 only. Works with wp-pagenavi
+Tested with Wordpress 2.7, 2.8.4 only. Works with wp-pagenavi
 */
 
 /**
