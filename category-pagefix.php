@@ -2,9 +2,9 @@
 /*
 Plugin Name: Category pagination fix
 Plugin URI: http://www.htmlremix.com/projects/category-pagination-wordpress-plugin
-Description: Fixes 404 page error in pagination of category page while using custom permalink
-Version: 3.0
-Author: Remiz Rahnas
+Description: Fixes 404 page error in pagination of category page while using custom permalink. Now added support for custom post types by using snippets from jdantzer plugin
+Version: 3.2.2
+Author: rahnas
 Author URI: http://www.htmlremix.com
 
 Copyright 2009  Creative common  (email: mail@htmlremix.com)
@@ -44,4 +44,16 @@ function remove_page_from_query_string($query_string)
 // I will kill you if you remove this. I died two days for this line 
 add_filter('request', 'remove_page_from_query_string');
 
+// following are code adapted from Custom Post Type Category Pagination Fix by jdantzer
+function fix_category_pagination($qs){
+	if(isset($qs['category_name']) && isset($qs['paged'])){
+		$qs['post_type'] = get_post_types($args = array(
+			'public'   => true,
+			'_builtin' => false
+		));
+		array_push($qs['post_type'],'post');
+	}
+	return $qs;
+}
+add_filter('request', 'fix_category_pagination');
 ?>

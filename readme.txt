@@ -1,12 +1,12 @@
 === Category pagination fix ===
-Contributors: Rahnas
+Contributors: rahnas
 Donate link: http://www.htmlremix.com/projects
 Tags: category, pagination, 404 error, bugfixing, navigation
 Requires at least: 2.0.2
-Tested up to: 3
+Tested up to: 3.2.2
 Stable tag: 3
 
-Fixes 404 error bug in wp category page while using custom permalink structure
+Fixes 404 error bug in wp category page while using custom permalink structure. Now added support for custom post types by using snippets from jdantzer plugin
 
 == Description ==
 
