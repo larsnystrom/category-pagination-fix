@@ -35,9 +35,9 @@ function remove_page_from_query_string($query_string)
 {
     if (isset($query_string['name']) && $query_string['name'] == 'page' && isset($query_string['page'])) {
         unset($query_string['name']);
-        // 'page' in the query_string looks like '/2', so i'm spliting it out
-        list($delim, $page_index) = explode('/', $query_string['page']);
-        $query_string['paged'] = $page_index;
+        // 'page' in the query_string might look like '/2', so i'm spliting it out
+        $pagePart = explode('/', $query_string['page']);
+        $query_string['paged'] = end($pagePart);
     }
     return $query_string;
 }
